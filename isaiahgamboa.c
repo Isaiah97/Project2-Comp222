@@ -1,6 +1,8 @@
+#include <stdio.h>
+
 
 void enter_instructions() {
-	
+
 
 }
 
