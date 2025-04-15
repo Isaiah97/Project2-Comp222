@@ -15,14 +15,14 @@ void total_cycle_count() {
 }
 
 
-int main(){
+int main(){							
 	int choice;
     do {
         printf("\nPerformance assessment:\n");
         printf("-----------------------\n");
-        printf("1) Enter parameters\n");
-        printf("2) Print table of input parameters\n");
-        printf("3) Print table of performance\n");
+        printf("1) Enter instructions\n");
+        printf("2) Print pipeline table\n");
+        printf("3) Print total count of cycles\n");
         printf("4) Quit\n");
         printf("Enter selection: ");
         scanf("%d", &choice);
