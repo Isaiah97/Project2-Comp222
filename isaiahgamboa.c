@@ -1,6 +1,16 @@
 
+void enter_instructions() {
+	
 
+}
 
+void print_pipeline_table() {
+
+}
+
+void total_cycle_count() {
+
+}
 
 
 int main(){
@@ -18,13 +28,13 @@ int main(){
         //fill in the different cases with 
         switch (choice) {
             case 1:
-                enter_params();
+                enter_instructions();
                 break;
             case 2:
-                print_input_table();
+                print_pipeline_table();
                 break;
             case 3:
-                print_performance_table();
+                total_cycle_count();
                 break;
             case 4:
                 printf("Exiting program.\n");
