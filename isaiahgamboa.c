@@ -2,6 +2,9 @@
 #include <stdlib.h> // need memory allocation 
 #include <string.h> // character arrays
 
+#define max_instructions 100
+#define max_length
+#define stages 5
 
 //Need global variables
 int num_instruction = 0; //need to classify # of instructions
