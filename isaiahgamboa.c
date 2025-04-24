@@ -8,10 +8,10 @@
 
 //Need global variables
 int num_instruction = 0; //need to classify # of instructions
-char instructions[max_instructions][max_length];
+char instructions = [max_instructions][max_length];
 
 void enter_instructions() {
-	printf("Enter the number of instructions: ")
+	printf("Enter the number of instructions: ");
 		scanf("%d", &num_instruction);
 			getchar();
 
