@@ -1,9 +1,22 @@
-#include <stdio.h>
+#include <stdio.h> //include stdio.h
+#include <stdlib.h> // need memory allocation 
+#include <string.h> // character arrays
 
+
+//Need global variables
+int num_instruction = 0; //need to classify # of instructions
+char instructions[max_instructions][max_length];
 
 void enter_instructions() {
+	printf("Enter the number of instructions: ")
+		scanf("%d", &num_instruction);
+			getchar();
 
-
+	for (int i = 0; i < num_instruction; i++) {
+		printf("%d ", i + 1);
+			fgets(instructions[i], max_length, stdin);
+			instructions[i][strcspn(instructions[i], "\n")] = 0;
+	}
 }
 
 void print_pipeline_table() {
