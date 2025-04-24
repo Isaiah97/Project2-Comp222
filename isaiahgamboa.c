@@ -2,9 +2,9 @@
 #include <stdlib.h> // need memory allocation 
 #include <string.h> // character arrays
 
-#define max_instructions 100
-#define max_length 100
-#define stages 5
+#define max_instructions 100	//setting max instructions to 100
+#define max_length 100			//setting max length to 100
+#define stages 5				// IF, ID, EX, MEM, WB
 
 //Need global variables
 int num_instruction = 0; //need to classify # of instructions
@@ -23,13 +23,13 @@ void enter_instructions() {
 }
 
 void print_pipeline_table() {
-	int cycle_offset = 0;
+	int cycle_buffer = 0;
 
 	for (int i = 0; i < num_instruction; i++) {
-		for (int j = 0; j < cycle_offset; j++)
-			printf(" ");
+		for (int j = 0; j < cycle_buffer; j++)
+			printf("     ");
 		printf("| IF | ID | EX | MEM | WB | \n");
-		cycle_offset++;
+		cycle_buffer++;
 	}
 }
 
