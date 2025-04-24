@@ -36,7 +36,7 @@ void print_pipeline_table() {
 void total_cycle_count() {
 	int cylce_counter;
 
-	for (cylce_counter = num_instruction; num_instruction + 1; cylce_counter++){
+	while(cylce_counter = num_instruction + 4){
 		printf("The total cycle count for the program is ", num_instruction);
 	}
 }
