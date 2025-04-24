@@ -23,7 +23,14 @@ void enter_instructions() {
 }
 
 void print_pipeline_table() {
+	int cycle_offset = 0;
 
+	for (int i = 0; i < num_instruction; i++) {
+		for (int j = 0; j < cycle_offset; j++)
+			printf(" ");
+		printf("| IF | ID | EX | MEM | WB | \n");
+		cycle_offset++;
+	}
 }
 
 void total_cycle_count() {
