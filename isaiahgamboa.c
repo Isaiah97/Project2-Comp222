@@ -34,11 +34,8 @@ void print_pipeline_table() {
 }
 
 void total_cycle_count() {
-	int cylce_counter;
-
-	while(cylce_counter == num_instruction + 4){
-		printf("The total cycle count for the program is " + cylce_counter);
-	}
+	int cylce_counter = num_instruction + 4;
+		printf("The total cycle count for the program is: ", cylce_counter)	
 }
 
 
