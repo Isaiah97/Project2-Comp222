@@ -18,7 +18,7 @@ void enter_instructions() {
 	for (int i = 0; i < num_instruction; i++) {
 		printf("%d ", i + 1);
 			fgets(instructions[i], max_length, stdin);
-			instructions[i][strcspn(instructions[i], "\n")] = 0;
+			instructions[i][strcspn(instructions[i], ")", "\n")] = 0;
 	}
 }
 
@@ -34,7 +34,9 @@ void print_pipeline_table() {
 }
 
 void total_cycle_count() {
+	int cylce_counter;
 
+	
 }
 
 
