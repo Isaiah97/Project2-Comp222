@@ -3,12 +3,12 @@
 #include <string.h> // character arrays
 
 #define max_instructions 100
-#define max_length
+#define max_length 100
 #define stages 5
 
 //Need global variables
 int num_instruction = 0; //need to classify # of instructions
-char instructions = [max_instructions][max_length];
+char instructions[max_instructions][max_length];
 
 void enter_instructions() {
 	printf("Enter the number of instructions: ");
