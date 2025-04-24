@@ -28,7 +28,7 @@ void print_pipeline_table() {
 	for (int i = 0; i < num_instruction; i++) {
 		for (int j = 0; j < cycle_buffer; j++)
 			printf("     ");
-		printf("| IF  | ID  | EX  | MEM | WB  | \n");
+		printf("| IF | ID  | EX  | MEM | WB  | \n");
 		cycle_buffer++;
 	}
 }
