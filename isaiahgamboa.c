@@ -1,6 +1,6 @@
 #include <stdio.h> //include stdio.h
 #include <stdlib.h> // need memory allocation 
-#include <string.h> // character arrays
+#include <string.h> // string operations
 
 #define max_instructions 100	//setting max instructions to 100
 #define max_length 100			//setting max length to 100
@@ -8,38 +8,39 @@
 
 //Need global variables
 int num_instruction = 0; //need to classify # of instructions
-char instructions[max_instructions][max_length];
+char instructions[max_instructions][max_length]; //instructions array
 
-void enter_instructions() {
+void enter_instructions() { //need enter_instrucions method
 	printf("Enter the number of instructions: ");
-		scanf("%d", &num_instruction);
-			getchar();
+		scanf("%d", &num_instruction); //scans user input
+			getchar(); //getchar gets rid of newline scanf produces
 
-	for (int i = 0; i < num_instruction; i++) {
+	for (int i = 0; i < num_instruction; i++) {// using int i for num_intructions for organization
 		printf("%d ", i + 1);
 			fgets(instructions[i], max_length, stdin);
-			instructions[i][strcspn(instructions[i], "\n")] = 0;
+			instructions[i][strcspn(instructions[i], "\n")] = 0;//
 	}
 }
 
-void print_pipeline_table() {
-	int cycle_buffer = 0;
+void print_pipeline_table() { //need print_pipeline_table
+	int cycle_buffer = 0;  //need a buffer
 
 	for (int i = 0; i < num_instruction; i++) {
 		for (int j = 0; j < cycle_buffer; j++)
-			printf("     ");
+			printf("     ");	//line 30 and 31 is the table
 		printf("| IF | ID | EX | MEM| WB | \n");
 		cycle_buffer++;
 	}
 }
 
-void total_cycle_count() {
-	int cylce_counter = num_instruction + 4;
+void total_cycle_count() { //need total_cycle_count
+	int cylce_counter = num_instruction + 4; // can use a new int to == to num_instructions to count # of instructions
 		printf("The total cycle count for the program is: %d\n", cylce_counter);
+
 }
 
 
-int main(){							
+int main(){			// need a table for users to interact with			
 	int choice;
     do {
         printf("\nPerformance assessment:\n");
