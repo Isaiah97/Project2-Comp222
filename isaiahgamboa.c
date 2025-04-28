@@ -12,7 +12,7 @@ char instructions[max_instructions][max_length]; //instructions array
 
 void enter_instructions() { //need enter_instrucions method
 	printf("Enter the number of instructions: ");
-		scanf("%d", &num_instruction); //scans user input
+		scanf("%d)", &num_instruction); //scans user input. for organization added ')' at the end of instr. counter
 			getchar(); //getchar gets rid of newline scanf produces
 
 	for (int i = 0; i < num_instruction; i++) {// using int i for num_intructions for organization
